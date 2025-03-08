@@ -1,5 +1,10 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, publishDate } = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<a href={url}>
+  <li class="flex justify-between hover:underline rounded">
+    <span class="font-semibold">{title}</span>
+    <span>{publishDate}</span>
+  </li>
+</a>

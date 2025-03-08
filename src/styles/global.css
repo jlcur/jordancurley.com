@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Rubik Variable", "Inter", "sans-serif";
+  /* --font-sans: "Rubik Variable", "Inter", "sans-serif"; */
 
   --color-background: #161616;
   --color-primary: #f5945b;
