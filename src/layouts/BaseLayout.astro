@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import "@fontsource-variable/rubik";
 
 const { pageTitle } = Astro.props;
 ---
@@ -14,7 +15,7 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="font-sans max-w-2xl text-offwhite bg-background">
     <Header />
 
     <h1>{pageTitle}</h1>
