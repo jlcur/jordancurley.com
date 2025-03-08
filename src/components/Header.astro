@@ -1,13 +1,12 @@
 ---
-import Hamburger from "./Hamburger.astro";
 import Navigation from "./Navigation.astro";
-import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<header>
-  <nav>
-    <Hamburger />
-    <ThemeIcon />
+<header class="flex justify-between items-center mt-12">
+  <a href="/" class="hover:text-white transition-colors duration-200"
+    >Jordan Curley</a
+  >
+  <nav class="flex items-center gap-2 text-offwhite text-md">
     <Navigation />
   </nav>
 </header>
