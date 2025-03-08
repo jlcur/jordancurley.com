@@ -1,6 +1,20 @@
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-  <a href="/tags">Tags</a>
+---
+const links = [
+  { href: "/projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+  { href: "/tags", label: "Tags" },
+];
+---
+
+<div class="flex items-center gap-2">
+  {
+    links.map((link) => (
+      <a
+        href={link.href}
+        class="hover:text-white transition-colors duration-200"
+      >
+        {link.label}
+      </a>
+    ))
+  }
 </div>
