@@ -1,0 +1,30 @@
+---
+import { tv } from "tailwind-variants";
+
+const styles = tv({
+  base: "flex items-center gap-2 px-4 py-2 text-white border rounded-lg",
+  variants: {
+    variant: {
+      primary: "bg-primary border-none text-[#161616]",
+      secondary: "bg-secondary border-[#302f2f] text-[#989ca6] shadow-lg",
+      ghost: "bg-transparent",
+    },
+    size: {
+      sm: "py-1 px-3 text-xs",
+      md: "py-1.5 px-4 text-sm",
+      lg: "py-2 px-6 text-md",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+    variant: "primary",
+  },
+});
+
+const { text, icon, variant, class: className, ...attrs } = Astro.props;
+---
+
+<button class={styles({ variant, className })} {...attrs}>
+  <slot name="icon" />
+  {text}
+</button>
