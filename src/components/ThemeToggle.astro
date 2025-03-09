@@ -1,0 +1,66 @@
+---
+/**
+ * Credit to SerenModz21 (https://github.com/SerenModz21) for this script
+ *
+ * This script toggles theme change
+ */
+---
+
+<button
+  id="theme-toggle"
+  class="rounded-md p-1 border bg-secondary border-secondary-border"
+>
+  <div class="hidden dark:block">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="21"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12M11 1h2v3h-2zm0 19h2v3h-2zM3.515 4.929l1.414-1.414L7.05 5.636L5.636 7.05zM16.95 18.364l1.414-1.414l2.121 2.121l-1.414 1.414zm2.121-14.85l1.414 1.415l-2.121 2.121l-1.414-1.414zM5.636 16.95l1.414 1.414l-2.121 2.121l-1.414-1.414zM23 11v2h-3v-2zM4 11v2H1v-2z"
+      ></path></svg
+    >
+  </div>
+  <div class="dark:hidden">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="21"
+      height="21"
+      viewBox="0 0 24 24"
+      ><path
+        fill="currentColor"
+        d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22C6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981"
+      ></path></svg
+    >
+  </div>
+  <span class="sr-only">Toggle theme</span>
+</button>
+
+<script>
+  const button = document.getElementById("theme-toggle");
+  updateButton(button);
+
+  // must run the button update again because otherwise, the
+  // button will become useless after navigating to another page
+  document.addEventListener("astro:before-swap", ({ newDocument }) => {
+    const button = newDocument.getElementById("theme-toggle");
+    updateButton(button);
+  });
+
+  function updateButton(button: HTMLElement | null) {
+    if (!button) {
+      return console.warn("Theme Toggle button was not found");
+    }
+
+    // Toggle the dark class on button click
+    button.addEventListener("click", function () {
+      const out = document.documentElement.classList.toggle("dark");
+      this.title = `Switch to ${out ? "light" : "dark"} mode`;
+    });
+
+    // Set the title attribute based on the current theme
+    const isDark = document.documentElement.classList.contains("dark");
+    button.title = `Switch to ${isDark ? "light" : "dark"} mode`;
+  }
+</script>
