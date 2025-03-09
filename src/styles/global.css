@@ -4,12 +4,18 @@
 
 :root {
   --background: hsl(0 0% 100%);
-  --foreground: hsl(240 10% 3.9%);
+  --foreground: hsl(0 0% 9%);
+  --secondary: hsl(0 0% 96%);
+  --line: hsl(150 5% 92%);
+  --grey: hsl(0 0% 56%);
 }
 
 .dark {
   --background: hsl(0 0% 13%);
   --foreground: hsl(240 5% 84%);
+  --secondary: hsl(0 0% 15%);
+  --line: hsl(0 1% 19%);
+  --grey: hsl(240 1% 38%);
 }
 
 @theme {
@@ -17,12 +23,11 @@
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary: var(--secondary);
+  --color-line: var(--line);
+  --color-grey: var(--grey);
 
-  --color-primary: #f5945b;
-  --color-secondary: #1c1c1c;
-  --color-secondary-border: #302f2f;
-  --color-offwhite: #d4d4d8;
-  --color-grey: #a1a1aa;
+  --color-primary: hsl(22 89% 65%);
 }
 
 @layer base {

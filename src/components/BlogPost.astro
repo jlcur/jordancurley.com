@@ -3,8 +3,10 @@ const { url, title, publishDate } = Astro.props;
 ---
 
 <a href={url}>
-  <li class="flex justify-between hover:underline rounded">
-    <span class="font-semibold">{title}</span>
-    <span>{publishDate}</span>
+  <li
+    class="flex justify-between hover:underline decoration-grey rounded items-baseline"
+  >
+    <span class="font-medium font-foreground">{title}</span>
+    <span class="text-sm text-grey">{publishDate}</span>
   </li>
 </a>

@@ -4,5 +4,16 @@ import BlogList from "../components/BlogList.astro";
 ---
 
 <BaseLayout>
+  <section class="flex flex-col my-24">
+    <h1 class="text-4xl sm:text-5xl font-bold text-black dark:text-white">
+      Hi, I'm <span class="text-primary">Jordan</span>
+    </h1>
+    <p class="mt-3 text-lg sm:text-xl text-foreground max-w-xl">
+      I'm a software developer from Ireland, focused on building full-stack
+      applications and writing about things I've learned
+    </p>
+  </section>
+  <hr class="text-grey/20 my-12" />
   <BlogList />
+  <hr class="text-grey/20 my-12" />
 </BaseLayout>
