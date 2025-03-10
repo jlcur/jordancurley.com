@@ -1,0 +1,29 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = [
+  {
+    title: "jordancurley.com",
+    year: "2025",
+    description: "My portfolio, built with Astro and TailwindCSS.",
+    source: "https://github.com/jlcur/jordancurley.com",
+    demo: "https://jordancurley.com",
+  },
+];
+---
+
+<section class="mt-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          year={project.year}
+          description={project.description}
+          source={project.source}
+          demo={project.demo}
+        />
+      ))
+    }
+  </div>
+</section>

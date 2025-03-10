@@ -1,0 +1,43 @@
+---
+const { title, year, description, demo, source } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<article
+  class="flex flex-col justify-between gap-4 w-full p-3 bg-secondary border border-line rounded-lg shadow-sm">
+  <header>
+    <div class="flex justify-between items-baseline">
+      <h3 class="font-medium text-primary text-lg">{title}</h3>
+      <time datetime={year} class="text-grey text-sm">{year}</time>
+    </div>
+    <p class="text-foreground mt-2">{description}</p>
+  </header>
+
+  <footer class="flex gap-2">
+    {
+      demo && (
+        <a
+          href={demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-1 text-sm bg-light-grey rounded-md py-1.5 px-2 border border-grey/30 hover:bg-primary/20 hover:text-primary hover:border-primary/30 transition duration-150">
+          Demo
+          <Icon name="externalLink" />
+        </a>
+      )
+    }
+    {
+      source && (
+        <a
+          href={source}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View source code"
+          class="flex items-center gap-1 text-sm bg-light-grey rounded-md py-1.5 px-2 border border-grey/30 hover:bg-primary/20 hover:text-primary hover:border-primary/30 transition duration-150">
+          GitHub
+          <Icon name="github" />
+        </a>
+      )
+    }
+  </footer>
+</article>

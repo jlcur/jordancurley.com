@@ -1,0 +1,15 @@
+---
+import ProjectGrid from "../components/ProjectGrid.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <main class="px-4 sm:px-0 my-12">
+    <section aria-labelledby="projects-heading">
+      <h2 id="projects-heading" class="text-3xl font-semibold mb-6">
+        Projects
+      </h2>
+      <ProjectGrid />
+    </section>
+  </main>
+</BaseLayout>
