@@ -2,23 +2,32 @@
 import { getCollection } from "astro:content";
 import BlogPost from "./BlogPost.astro";
 
-const allPosts = await getCollection("blog");
+const allPosts = (await getCollection("blog")).sort(
+  (a, b) =>
+    new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
 
-const formatDate = (dateString: string) => {
-  const date = new Date(dateString);
+const formatDate = (date: Date) => {
   return date.toLocaleDateString("en-GB", { year: "numeric", month: "short" });
 };
 ---
 
-<h2 class="text-3xl mb-3">Articles</h2>
-<ul>
+<section aria-labelledby="blog-heading">
+  <h2 id="blog-heading" class="text-3xl font-semibold mb-6">Latest Posts</h2>
+
   {
-    allPosts.map((post: any) => (
-      <BlogPost
-        url={`/posts/${post.id}`}
-        title={post.data.title}
-        publishDate={formatDate(post.data.pubDate)}
-      />
-    ))
+    (
+      <ul>
+        {allPosts.map((post) => (
+          <li>
+            <BlogPost
+              url={`/posts/${post.id}`}
+              title={post.data.title}
+              publishDate={formatDate(post.data.pubDate)}
+            />
+          </li>
+        ))}
+      </ul>
+    )
   }
-</ul>
+</section>
