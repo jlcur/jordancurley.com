@@ -20,17 +20,33 @@ export async function getStaticPaths() {
   });
 }
 
+const formatDate = (date: Date) => {
+  return date.toLocaleDateString("en-GB", { year: "numeric", month: "short" });
+};
+
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
-  <ul>
-    {
-      posts.map((post) => (
-        <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
-      ))
-    }
-  </ul>
+  <main class="px-4 sm:px-0 my-12">
+    <section aria-labelledby="tags-heading">
+      <h2 id="tags-heading" class="text-3xl mb-6">
+        {`${posts.length} posts tagged with #${tag}`}
+      </h2>
+      <div>
+        <ul>
+          {
+            posts.map((post) => (
+              <BlogPost
+                url={`/posts/${post.id}/`}
+                title={post.data.title}
+                publishDate={formatDate(post.data.pubDate)}
+              />
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
