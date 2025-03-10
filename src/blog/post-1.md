@@ -9,20 +9,47 @@ image:
 tags: ["astro", "blogging", "learning in public"]
 ---
 
-# My First Blog Post
+## Heading
 
-Published on: 2025-03-05
+```ts title="my-test-file.ts" {1-2}
+console.log("line 1");
+console.log("line 2");
+console.log("line 3");
+```
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+placeholder
 
-## What I've accomplished
+```bash
+echo "This terminal frame has no title"
+```
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
+placeholder
 
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
+```powershell title="PowerShell terminal example"
+Write-Output "This one has a title!"
+```
 
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+placeholder
 
-## What's next
+```js title="line-markers.js" del={2} ins={3-4} {6}
+function demo() {
+  console.log("this line is marked as deleted");
+  // This line and the next one are marked as inserted
+  console.log("this is the second inserted line");
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+  return "this line uses the neutral default marker type";
+}
+```
+
+placeholder
+
+```js "given text"
+function demo() {
+  // Mark any given text inside lines
+  return "Multiple matches of the given text are supported";
+}
+```
+
+placeholder
+
+`This` is an inline code block! <code>This</code> is one too!
