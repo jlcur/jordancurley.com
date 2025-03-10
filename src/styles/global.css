@@ -8,6 +8,7 @@
   --secondary: hsl(0 0% 96%);
   --line: hsl(150 5% 92%);
   --grey: hsl(0 0% 56%);
+  --light-grey: hsl(28 35% 98%);
 }
 
 .dark {
@@ -16,6 +17,7 @@
   --secondary: hsl(0 0% 15%);
   --line: hsl(0 1% 19%);
   --grey: hsl(240 1% 38%);
+  --light-grey: hsl(0 0% 19%);
 }
 
 @theme {
@@ -26,6 +28,7 @@
   --color-secondary: var(--secondary);
   --color-line: var(--line);
   --color-grey: var(--grey);
+  --color-light-grey: var(--light-grey);
 
   --color-primary: hsl(22 89% 65%);
 }

@@ -2,11 +2,17 @@
 const { url, title, publishDate } = Astro.props;
 ---
 
-<a href={url}>
-  <li
-    class="flex justify-between hover:underline decoration-grey rounded items-baseline"
-  >
-    <span class="font-medium font-foreground">{title}</span>
-    <span class="text-sm text-grey">{publishDate}</span>
-  </li>
+<a
+  href={url}
+  class="flex gap-4 justify-between items-center group"
+  aria-label={`Read ${title}`}>
+  <p class="font-medium text-foreground group-hover:text-primary">
+    {title}
+  </p>
+  <hr class="flex-1 m-0 border-grey/30 group-hover:border-primary" />
+  <time
+    datetime={publishDate}
+    class="text-sm text-grey font-light group-hover:text-primary">
+    {publishDate}
+  </time>
 </a>
