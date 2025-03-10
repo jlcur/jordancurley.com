@@ -1,15 +1,49 @@
 ---
-import Social from "./Social.astro";
+import { Icon } from "astro-icon/components";
 ---
 
-<footer>
-  <Social platform="github" username="jlcur" />
-</footer>
+<footer class="py-8 mt-auto">
+  <div class="max-w-screen-xl mx-auto">
+    <div
+      class="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-0 border-t border-grey/30 pt-6">
+      <!-- Social media section -->
+      <div class="flex items-center gap-2">
+        <a
+          href="https://github.com/jlcur"
+          class="rounded-md bg-secondary shadow-sm text-2xl p-1 border border-line transition-all hover:bg-primary hover:text-white"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub">
+          <Icon name="github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jordan-curley/"
+          class="rounded-md bg-secondary shadow-sm text-2xl p-1 border border-line transition-all hover:bg-primary hover:text-white"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn">
+          <Icon name="linkedin" />
+        </a>
+      </div>
 
-<style>
-  footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-</style>
+      <!-- Contact and RSS section -->
+      <div class="flex gap-6 text-xs">
+        <a
+          href="mailto:hello@jordancurley.com"
+          class="hover:text-primary hover:cursor-pointer">
+          Contact me
+        </a>
+        <a
+          href="/rss.xml"
+          class="flex gap-1 items-center hover:text-primary hover:cursor-pointer">
+          RSS <Icon name="externalLink" />
+        </a>
+      </div>
+
+      <!-- Copyright section -->
+      <p class="text-xs text-grey mt-4 sm:mt-0">
+        © Jordan Curley {new Date().getFullYear()}
+      </p>
+    </div>
+  </div>
+</footer>

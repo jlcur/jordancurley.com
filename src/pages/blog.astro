@@ -4,6 +4,10 @@ import BlogList from "../components/BlogList.astro";
 ---
 
 <BaseLayout>
-  <h2 class="text-3xl mb-6">Articles</h2>
-  <BlogList />
+  <main class="px-4 sm:px-0 my-6">
+    <section aria-labelledby="blog-heading">
+      <h2 id="blog-heading" class="text-3xl mb-6">Blog</h2>
+      <BlogList />
+    </section>
+  </main>
 </BaseLayout>

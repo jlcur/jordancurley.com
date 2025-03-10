@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import "@fontsource-variable/inter";
 
@@ -46,10 +47,10 @@ const { pageTitle } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
-  <body class="font-sans max-w-xl px-3 md:px-0">
+  <body class="font-sans max-w-xl px-3 md:px-0 min-h-screen flex flex-col">
     <Header />
     <div class="mt-12"><slot /></div>
-
+    <Footer />
     <script>
       import "../scripts/menu.js";
     </script>
