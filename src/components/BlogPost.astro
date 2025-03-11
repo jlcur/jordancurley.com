@@ -4,15 +4,18 @@ const { url, title, publishDate } = Astro.props;
 
 <a
   href={url}
-  class="flex gap-4 justify-between items-center group"
+  class="flex items-center gap-4 w-full group"
   aria-label={`Read ${title}`}>
-  <p class="font-medium text-foreground group-hover:text-primary">
+  <p
+    class="m-0 sm:truncate font-medium text-foreground group-hover:text-primary">
     {title}
   </p>
-  <hr class="flex-1 m-0 border-grey/30 group-hover:border-primary" />
+  <hr
+    class="min-w-7 flex-1 m-0 border-t border-grey/30 group-hover:border-primary"
+  />
   <time
     datetime={publishDate}
-    class="text-sm text-grey font-light group-hover:text-primary">
+    class="text-sm text-grey font-light group-hover:text-primary shrink-0">
     {publishDate}
   </time>
 </a>
