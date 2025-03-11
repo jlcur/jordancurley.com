@@ -16,18 +16,18 @@ export default defineConfig({
     preact(),
     icon(),
     expressiveCode({
-      themes: ["github-dark", "github-light"],
+      themes: ["slack-dark", "github-light"],
       styleOverrides: {
         borderRadius: "0",
 
         frames: {
-          editorBackground: "#2f2f2f",
-          terminalBackground: "#2f2f2f",
-          editorTabBarBackground: "#1a1a1a",
-          terminalTitlebarBackground: "#1a1a1a",
-          editorActiveTabBackground: "#1a1a1a",
-          editorActiveTabIndicatorTopColor: "#1a1a1a",
-          editorActiveTabIndicatorBottomColor: "#1a1a1a",
+          //   editorBackground: "#2f2f2f",
+          //   terminalBackground: "#2f2f2f",
+          //   editorTabBarBackground: "#1a1a1a",
+          //   terminalTitlebarBackground: "#1a1a1a",
+          //   editorActiveTabBackground: "#1a1a1a",
+          //   editorActiveTabIndicatorTopColor: "#1a1a1a",
+          //   editorActiveTabIndicatorBottomColor: "#1a1a1a",
           frameBoxShadowCssValue: "",
         },
       },

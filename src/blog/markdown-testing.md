@@ -1,50 +1,15 @@
 ---
-title: "Testing markdown"
+title: "Rendering markdown on Astro with TailwindCSS and Expressive Code"
 pubDate: 2025-03-05
 description: "Testing markdown on Astro blog"
 author: "Astro Learner"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["astro", "tailwind", "markdown"]
 ---
 
-# Markdown: Syntax
-
-<ul id="ProjectSubmenu">
-    <li><a href="/projects/markdown/" title="Markdown Project Page">Main</a></li>
-    <li><a href="/projects/markdown/basics" title="Markdown Basics">Basics</a></li>
-    <li><a class="selected" title="Markdown Syntax Documentation">Syntax</a></li>
-    <li><a href="/projects/markdown/license" title="Pricing and License Information">License</a></li>
-    <li><a href="/projects/markdown/dingus" title="Online Markdown Web Form">Dingus</a></li>
-</ul>
-
-- [Overview](#overview)
-  - [Philosophy](#philosophy)
-  - [Inline HTML](#html)
-  - [Automatic Escaping for Special Characters](#autoescape)
-- [Block Elements](#block)
-  - [Paragraphs and Line Breaks](#p)
-  - [Headers](#header)
-  - [Blockquotes](#blockquote)
-  - [Lists](#list)
-  - [Code Blocks](#precode)
-  - [Horizontal Rules](#hr)
-- [Span Elements](#span)
-  - [Links](#link)
-  - [Emphasis](#em)
-  - [Code](#code)
-  - [Images](#img)
-- [Miscellaneous](#misc)
-  - [Backslash Escapes](#backslash)
-  - [Automatic Links](#autolink)
-
-**Note:** This document is itself written using Markdown; you
-can [see the source for it by adding '.text' to the URL][src].
-
-[src]: /projects/markdown/syntax.text
-
----
+> Note: this is a sample markdown file from [John Gruber](https://daringfireball.net/projects/markdown/syntax)
 
 <h2 id="overview">Overview</h2>
 
