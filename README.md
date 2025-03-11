@@ -1,6 +1,6 @@
 # jordancurley.com
 
-My personal website, built with Astro, TailwindCSS, and deployed on Netlify.
+My personal website built with Astro, TailwindCSS, and deployed on Netlify.
 
 ## Features
 
